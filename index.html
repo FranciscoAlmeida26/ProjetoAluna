@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Aluna</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    </header>    
+    <main>
+        <div class="pagina">
+            <div class="fundo">
+                <h1>
+                    <img src="imagens/Frame 6.png" alt="imagem do titulo" id="imagem">
+                </h1>
+                <input id="texto" type="text" value="Digite seu texto" onfocus="this.value='';">
+                <div class="poistexto">
+                    <h2 class="informa">&#33; Apenas letras minúsculas e sem acento.</h2>
+                    <div class="button">
+                        <button class="crip" type="button" onclick="criptografar()">Criptografar</button>
+                        <button class="descr" type="button" onclick="descriptografar()">Descriptografar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="resultado">
+                <img id="img" class="pesquisa" src="imagens/pesquisa.jpg" alt="pesquisa">
+                <b>
+                    <h2 id="resultado" style="background-color: white;">Nenhuma mensagem encontrada</h2>
+                </b>
+                <h5 id="h5">Digite um texto que você deseja criptografar ou descriptografar.</h5>
+            </div>
+
+        </div>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>   
+</body>
+</html>

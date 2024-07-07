@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(240, 245, 247);
+}
+
+head{
+    width: 60rem;
+    height: 50rem;
+    top: 38.875rem;
+    left: -142.3125rem;
+}
+
+.pagina{
+    display: flex;
+    gap: 1.625rem;    
+}
+
+img{
+    margin: 3rem ;
+    width: Hug(17.5rem);
+    height: Hug(3rem);
+    top: 2.5rem;
+    left: 2.5rem;
+    gap: 2.5rem;
+}
+
+input{
+    margin: 2rem 0rem 0rem 20rem;
+    font-size: 190%;
+    width: 20.5rem;
+    height: 3rem;
+    top: 10.5rem;
+    left: 15rem;
+    color: #0a3871;
+    border: transparent;    
+}
+
+.poistexto{
+ margin: 15.75rem 0 0 20rem ;
+}
+
+.informa{
+    font-family: Inter,Arial, Helvetica, sans-serif;
+    font-size: .9rem;
+    font-weight: .2rem;
+    line-height: 1.125rem;
+    text-align: left;    
+    color:#495057 ;
+}
+
+.button{    
+    display: flex;
+    gap: 1.5rem;
+    width: auto;
+    margin: .625rem 0 0 0;
+      
+}
+
+.crip{
+    width: 15.75rem;
+    height: hug (4.1875rem);
+    padding: 1.5rem 3.75rem;
+    border-radius: 1.5rem;
+    background-color: #0a3871;
+    color: white;
+}
+
+.descr{
+    width: 15.75rem;
+    height: hug (4.1875rem);
+    padding: 1.5rem 3.75rem;
+    border-radius: 1.5rem;
+    background-color: #d8dfe8;
+    color: #0a3871;
+}
+
+.resultado{
+    margin: 3rem ;
+    padding: 50px;
+    border: solid 1px;
+    border-radius: 2rem;
+    border-color: rgb(151, 171, 177);
+    background-color: rgb(255, 255, 255);
+    width: 8.5rem;
+    height: 27rem;
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    gap: .625rem;  
+}
+
+h5{
+    background-color: white;
+    font-size: .75rem;
+    color: #495057;
+}
+
+.pesquisa{
+    margin: .75rem 1.875rem 0 0; 
+    width: 11rem;
+    
+}
