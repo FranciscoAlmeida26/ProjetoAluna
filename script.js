@@ -17,15 +17,15 @@ function criptografar(){
     }
     let novotexto= texto.split('').map(char =>{
         if (char === 'a'){
-            return 'ai ';
+            return 'ai';
         } else if(char === 'e'){
-            return ',enter ,';
+            return 'enter';
         }else if(char === 'i'){
-            return 'imes ';
+            return 'imes';
         }else if(char === 'o'){
-            return 'ober ';
+            return 'ober';
         }else if(char === 'u'){
-            return 'ufat ';
+            return 'ufat';
         }
         return char;
     }).join('');
@@ -37,28 +37,32 @@ function criptografar(){
 }
 
 function descriptografar(){
-    let texto=window.document.getElementById('texto').value;
-    if(texto=='Digite seu texto'){
-        texto=0
-    }    
-    if(texto==0){
-        alert("coloque um texto na caixa de texto!!")
+    let textoCriptografado = window.document.getElementById('texto').value;
+    if (textoCriptografado == 'Digite seu texto') {
+        textoCriptografado = 0;
     }
-    let destexto= texto.split(' ').map(char =>{
-        if (char === 'ai'){
-            return 'a';
-        } else if(char === 'enter'){
-            return 'e';
-        }else if(char === 'imes'){
-            return 'i';
-        }else if(char === 'ober'){
-            return 'o';
-        }else if(char === 'ufat'){
-            return 'u';
-        }
-        return char;
-    }).join('');
-    console.log(destexto)
-    window.document.getElementById("h5").innerText=''
-    window.document.getElementById("resultado").innerText=destexto
+    if (textoCriptografado == 0) {
+        alert("Coloque um texto na caixa de texto!!");
+        return;
+    }
+    
+    let textoDescriptografado = textoCriptografado
+        .replace(/ai/g, 'a')
+        .replace(/enter/g, 'e')
+        .replace(/imes/g, 'i')
+        .replace(/ober/g, 'o')
+        .replace(/ufat/g, 'u');
+    
+    console.log(textoDescriptografado);
+    
+    const imagem = window.document.getElementById("img");
+    if (imagem) {
+        imagem.remove();
+    }
+    window.document.getElementById("h5").innerText = '';
+    window.document.getElementById("resultado").innerText = textoDescriptografado;
+}
+
+function reiniciarPagina() {
+    location.reload();
 }
