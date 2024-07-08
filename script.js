@@ -8,40 +8,41 @@ A letra "u" é convertida para "ufat"
 console.log(novaFrase); // "Etsx é umx frxsx dy exymplx"*/
 
 function criptografar(){
-    let texto=window.document.getElementById('texto').value;
-    if(texto=='Digite seu texto'){
-        texto=0
+    let texto = window.document.getElementById('texto').value;
+    if (texto == 'Digite seu texto' || texto.trim() === '') {
+        alert("Coloque um texto na caixa de texto!!");
+        return;
     }    
-    if(texto==0){
-        alert("coloque um texto na caixa de texto!!")
-    }
-    let novotexto= texto.split('').map(char =>{
-        if (char === 'a'){
+
+    let novotexto = texto.split('').map(char => {
+        if (char === 'a') {
             return 'ai';
-        } else if(char === 'e'){
+        } else if (char === 'e') {
             return 'enter';
-        }else if(char === 'i'){
+        } else if (char === 'i') {
             return 'imes';
-        }else if(char === 'o'){
+        } else if (char === 'o') {
             return 'ober';
-        }else if(char === 'u'){
+        } else if (char === 'u') {
             return 'ufat';
         }
         return char;
     }).join('');
-    console.log(novotexto)
-    const imagem=window.document.getElementById("img")
-    imagem.remove();
-    window.document.getElementById("h5").innerText=''
-    window.document.getElementById("resultado").innerText=novotexto
+
+    console.log(novotexto);
+    
+    const imagem = window.document.getElementById("img");
+    if (imagem) {
+        imagem.remove();
+    }
+
+    window.document.getElementById("h5").innerText = '';
+    window.document.getElementById("resultado").innerText = novotexto;
 }
 
 function descriptografar(){
     let textoCriptografado = window.document.getElementById('texto').value;
-    if (textoCriptografado == 'Digite seu texto') {
-        textoCriptografado = 0;
-    }
-    if (textoCriptografado == 0) {
+    if (textoCriptografado == 'Digite seu texto' || textoCriptografado.trim() === '') {
         alert("Coloque um texto na caixa de texto!!");
         return;
     }
@@ -59,10 +60,7 @@ function descriptografar(){
     if (imagem) {
         imagem.remove();
     }
+
     window.document.getElementById("h5").innerText = '';
     window.document.getElementById("resultado").innerText = textoDescriptografado;
-}
-
-function reiniciarPagina() {
-    location.reload();
 }
